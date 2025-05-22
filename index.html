@@ -49,4 +49,206 @@
     .form-overlay {
       position: absolute;
       top: 50%;
-      left: 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 25px 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-overlay h3 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #0a0a23;
+    }
+
+    .form-overlay input,
+    .form-overlay textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-overlay button {
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      color: #0a0a23;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* Amenities Section */
+    .amenities-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 30px 20px;
+      background-color: #f8f9fa;
+      border-radius: 12px;
+    }
+
+    .amenities-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0a0a23;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .amenity-category {
+      margin-bottom: 30px;
+    }
+
+    .amenity-category h3 {
+      font-size: 1.5rem;
+      color: #007f5f;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 5px;
+    }
+
+    .amenity-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .amenity-item {
+      flex: 1 1 220px;
+      background: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #0a0a23;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      .amenity-list {
+        flex-direction: column;
+      }
+
+      .form-overlay {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Titanium SPR by Signature Global</h1>
+    <h2>Exclusively Marketed by Luxora Estate</h2>
+    <p>Ultra-Luxury Living in Gurugram</p>
+  </header>
+
+  <div class="banner-container">
+    <img src="gallery1.jpg" alt="Banner">
+    <div class="form-overlay">
+      <h3>Book a Visit / Get a Callback</h3>
+      <form action="https://formspree.io/f/xrbqvkvv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone" required />
+        <textarea name="message" placeholder="Message or Inquiry" rows="3"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <section>
+    <h3>Project Highlights</h3>
+    <ul>
+      <li>Ultra-premium residences on Southern Peripheral Road (SPR)</li>
+      <li>Developed by Signature Global – India’s award-winning developer</li>
+      <li>Smart-home features, private elevators & designer interiors</li>
+      <li>World-class clubhouse, infinity pool & wellness zone</li>
+      <li>15 mins to NH8 & IGI Airport | Seamless metro access</li>
+      <li>Exclusive pre-launch benefits for NRIs & HNIs</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Why Choose Luxora Estate?</h3>
+    <ul>
+      <li>Official Channel Partner of Signature Global</li>
+      <li>1000+ satisfied NRI & investor clients</li>
+      <li>Transparent, RERA-compliant transactions</li>
+      <li>Dedicated support from inquiry to possession</li>
+    </ul>
+  </section>
+
+  <div class="amenities-section">
+    <h2>World-Class Amenities</h2>
+
+    <div class="amenity-category">
+      <h3>Health & Fitness</h3>
+      <div class="amenity-list">
+        <div class="amenity-item">Outdoor Gym</div>
+        <div class="amenity-item">260 Mtr Jogging Trail</div>
+        <div class="amenity-item">Strolling Paths</div>
+        <div class="amenity-item">Yoga & Meditation Area</div>
+        <div class="amenity-item">Preteen & Teens Play Area</div>
+        <div class="amenity-item">Total Lot Area</div>
+      </div>
+    </div>
+
+    <div class="amenity-category">
+      <h3>Pool Zone</h3>
+      <div class="amenity-list">
+        <div class="amenity-item">Heated Pool</div>
+        <div class="amenity-item">Leisure Pool</div>
+        <div class="amenity-item">Lap Pool</div>
+        <div class="amenity-item">Kids Pool</div>
+        <div class="amenity-item">Kids Water Play Area</div>
+      </div>
+    </div>
+
+    <div class="amenity-category">
+      <h3>Sports</h3>
+      <div class="amenity-list">
+        <div class="amenity-item">Cricket Practising Pitch</div>
+        <div class="amenity-item">Half Basketball Court</div>
+        <div class="amenity-item">Badminton Court</div>
+        <div class="amenity-item">Tennis Court</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Luxora Estate | Titanium SPR Project
+  </footer>
+</body>
+</html>
