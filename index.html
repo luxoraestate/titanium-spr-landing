@@ -1,113 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titanium SPR by Signature Global</title>
-  <meta name="description" content="Experience luxury and sustainability with Signature Global Titanium SPR – 3.5 & 4.5 BHK high-rise flats in Gurugram, offered by Luxora Estate.">
-  <meta name="keywords" content="Titanium SPR, Signature Global, Luxora Estate, 3.5 BHK, 4.5 BHK, Gurugram flats, eco-luxury homes">
+  <meta name="description" content="Explore 3.5 & 4.5 BHK luxury high-rise apartments at Signature Global Titanium SPR in Gurugram. A sustainable, elegant living experience with 55+ curated amenities.">
+  <meta name="keywords" content="Titanium SPR, Signature Global, Luxora Estate, 3.5 BHK, 4.5 BHK, SPR Gurugram, Luxury Apartments">
+  <meta name="author" content="Luxora Estate">
+  <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="tJ4wpXe95pAio0GitNi_2I1Qito-Zp5xhacccG0PsNc" />
-  <link rel="icon" type="image/png" href="/mnt/data/A_32x32_pixel_ICO_(favicon)_digital_graphic_featur.png">
+  <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #f2f7f1;
-      color: #2d2d2d;
+      background: #f4f8f5;
+      color: #333;
     }
-
-    .top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0D0D0D;
-      color: #FFFFFF;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    }
-
-    .top-header .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #FFD700;
-      text-transform: uppercase;
-    }
-
-    .top-header nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .top-header nav a {
-      text-decoration: none;
-      color: #EAEAEA;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .top-header nav a:hover {
-      color: #FFD700;
-    }
-
-    .top-header .cta-button {
-      padding: 0.5rem 1rem;
-      background-color: #FFD700;
-      color: #0D0D0D;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .top-header .cta-button:hover {
-      background-color: #C8A200;
-    }
-
     header {
+      background: url('banner-mobile.jpg') no-repeat center center/cover;
       text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('eco-banner.jpg') no-repeat center center/cover;
-      color: #fff;
-      padding: 80px 20px;
+      padding: 100px 20px 80px;
+      color: white;
       position: relative;
     }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: #fff8e1;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    header h2 {
-      font-weight: 300;
-      margin: 10px 0 5px;
-      color: #f9f9f9;
-    }
-
-    header p {
-      color: #e0e0e0;
-    }
-
-    .slider {
-      position: relative;
-      width: 100%;
-      height: 80vh;
-      overflow: hidden;
-    }
-
-    .slides img {
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      background: rgba(0, 51, 34, 0.6);
+      z-index: 1;
+    }
+    header h1, header h2, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+    }
+    .slider {
       display: none;
     }
-
-    .slides img.active {
-      display: block;
-    }
-
     .form-overlay {
       position: absolute;
       top: 50%;
@@ -118,23 +56,21 @@
       border-radius: 10px;
       max-width: 350px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      z-index: 2;
     }
-
     .form-overlay form {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-
     .form-overlay input,
     .form-overlay textarea {
       padding: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
     }
-
     .form-overlay button {
-      background: linear-gradient(to right, #567d46, #c5a249);
+      background: linear-gradient(to right, #4caf50, #8bc34a);
       color: white;
       padding: 12px;
       border: none;
@@ -142,229 +78,78 @@
       cursor: pointer;
       font-weight: bold;
     }
-
     section {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 20px auto;
       padding: 20px;
-      background: #ffffff;
+      background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
     h3 {
-      color: #567d46;
+      color: #4caf50;
       font-size: 1.6rem;
-      border-bottom: 2px solid #567d46;
+      border-bottom: 2px solid #4caf50;
       padding-bottom: 5px;
     }
-
     .amenities {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
-
     .amenity-block {
-      background: #e6f4ea;
+      background: #f0f0f0;
       padding: 15px;
       border-radius: 10px;
     }
-
     ul {
       padding-left: 0;
       list-style: none;
     }
-
     .cta, footer {
       text-align: center;
-      background: #567d46;
+      background: #003322;
       color: white;
       padding: 30px 20px;
     }
-
     .cta a {
       display: inline-block;
       margin: 10px;
-      background: linear-gradient(to right, #c5a249, #567d46);
+      background: linear-gradient(to right, #4caf50, #8bc34a);
       color: white;
       padding: 12px 24px;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
     }
-
     .whatsapp-icon {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 999;
     }
-
     .whatsapp-icon img {
       width: 60px;
       height: 60px;
     }
-
     @media (max-width: 768px) {
-      .top-header nav {
-        display: none;
-      }
-      header h1 {
-        font-size: 1.8rem;
+      header {
+        padding: 80px 20px;
       }
       .form-overlay {
         position: static;
-        margin: 20px auto;
         transform: none;
+        margin: 20px auto;
       }
     }
   </style>
-
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://luxoraestate.co.in/#website",
-        "url": "https://luxoraestate.co.in",
-        "name": "Luxora Estate",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://luxoraestate.co.in/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://luxoraestate.co.in/#organization",
-        "name": "Luxora Estate",
-        "url": "https://luxoraestate.co.in",
-        "logo": "https://luxoraestate.co.in/logo.png",
-        "sameAs": [
-          "https://www.facebook.com/LuxoraEstate",
-          "https://www.instagram.com/luxoraestate/",
-          "https://wa.me/919310569568"
-        ]
-      },
-      {
-        "@type": "RealEstateAgent",
-        "@id": "https://luxoraestate.co.in/#realestateagent",
-        "name": "Luxora Estate",
-        "url": "https://luxoraestate.co.in",
-        "logo": "https://luxoraestate.co.in/logo.png",
-        "image": "https://luxoraestate.co.in/logo.png",
-        "telephone": "+91 9310569568",
-        "email": "vivek.shuklaluxoraestates@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Sector 71, Southern Peripheral Road",
-          "addressLocality": "Gurugram",
-          "addressRegion": "Haryana",
-          "postalCode": "122018",
-          "addressCountry": "IN"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Gurugram, India"
-        },
-        "priceRange": "₹₹₹"
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://luxoraestate.co.in/#localbusiness",
-        "name": "Luxora Estate",
-        "image": "https://luxoraestate.co.in/logo.png",
-        "priceRange": "₹₹₹",
-        "telephone": "+91 9310569568",
-        "email": "vivek.shuklaluxoraestates@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Sector 71, Southern Peripheral Road",
-          "addressLocality": "Gurugram",
-          "addressRegion": "Haryana",
-          "postalCode": "122018",
-          "addressCountry": "IN"
-        },
-        "url": "https://luxoraestate.co.in",
-        "openingHours": "Mo-Su 09:00-23:00",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "28.4129",
-          "longitude": "77.0419"
-        },
-        "sameAs": [
-          "https://www.facebook.com/LuxoraEstate",
-          "https://www.instagram.com/luxoraestate/"
-        ]
-      },
-      {
-        "@type": "Product",
-        "@id": "https://luxoraestate.co.in/#titaniumspr",
-        "name": "Titanium SPR by Signature Global",
-        "image": [
-          "https://luxoraestate.co.in/images/gallery2.jpg",
-          "https://luxoraestate.co.in/images/gallery3.jpg"
-        ],
-        "description": "3.5 & 4.5 BHK high-rise apartments in Sector 71, SPR Road, Gurugram with 55+ modern amenities.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Signature Global"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "INR",
-          "price": "15000000",
-          "priceValidUntil": "2025-12-31",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
-          "url": "https://luxoraestate.co.in"
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "4.7",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "NRI Client"
-          }
-        }
-      }
-    ]
-  }
-  </script>
 </head>
-
 <body>
-  <div class="top-header">
-    <div class="logo">Luxora Estate</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
-    <button class="cta-button">Get Started</button>
-  </div>
-
   <header>
     <h1>Titanium SPR by Signature Global</h1>
     <h2>Exclusively Marketed by Luxora Estate</h2>
-    <p>Where Urban Luxury Meets Green Harmony</p>
-  </header>
-
-  <div class="slider">
-    <div class="slides">
-      <img src="gallery2.jpg" alt="Exterior view of Titanium SPR" class="active">
-      <img src="gallery3.jpg" alt="Modern apartment interior">
-      <img src="gallery4.jpg" alt="Amenities and green open spaces">
-    </div>
+    <p>Eco-luxury Living in Gurugram</p>
     <div class="form-overlay">
       <form action="https://formspree.io/f/xrbqvkvv" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -374,22 +159,83 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
+  </header>
 
-  <!-- Sections (Project Overview, Amenities, etc.) follow here exactly as before with green block styles applied -->
+  <section>
+    <h3>Project Overview</h3>
+    <p><strong>A tale of high rise: 3.5 & 4.5 BHK Flats in Gurugram</strong></p>
+    <p>Signature Global Titanium SPR offers robust, high-rise apartments in Sector 71, SPR Road. Designed with eco-conscious luxury, it features 55+ amenities for a balanced lifestyle.</p>
+  </section>
+
+  <section>
+    <h3>Amenities</h3>
+    <div class="amenities">
+      <div class="amenity-block">
+        <h4>Health & Fitness</h4>
+        <ul>
+          <li>Outdoor GYM</li>
+          <li>Jogging Trail 260 Mtr</li>
+          <li>Strolling Paths</li>
+          <li>Yoga & Meditation Area</li>
+          <li>Preteen & Teens Play area</li>
+          <li>Total Lot area</li>
+        </ul>
+      </div>
+      <div class="amenity-block">
+        <h4>Pool</h4>
+        <ul>
+          <li>Heated Pool</li>
+          <li>Leisure Pool</li>
+          <li>Lap Pool</li>
+          <li>Kids Pool</li>
+          <li>Kids Water Play</li>
+        </ul>
+      </div>
+      <div class="amenity-block">
+        <h4>Sports</h4>
+        <ul>
+          <li>Cricket Practising Pitch</li>
+          <li>Half Basketball Court</li>
+          <li>Badminton Court</li>
+          <li>Tennis Court</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Why Choose Luxora Estate?</h3>
+    <ul>
+      <li>Official Channel Partner of Signature Global</li>
+      <li>1000+ satisfied NRI & investor clients</li>
+      <li>Transparent, RERA-compliant transactions</li>
+      <li>Dedicated support from inquiry to possession</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Location Advantage</h3>
+    <ul>
+      <li>Close to IGI Airport, Golf Course Ext. Road & top schools</li>
+      <li>Located in Sector 71, Southern Peripheral Road (SPR), Gurugram</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h3>Book a Private Visit or Request a Callback</h3>
+    <p>Available daily between 9:00 AM - 11:00 PM</p>
+    <a href="tel:+919310569568">Call Now: +91 9310569568</a>
+    <a href="mailto:vivek.shuklaluxoraestates@gmail.com">Email: vivek.shuklaluxoraestates@gmail.com</a>
+  </section>
+
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/919310569568" target="_blank">
+      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp">
+    </a>
+  </div>
 
   <footer>
     &copy; 2025 Luxora Estate | Titanium SPR Project
   </footer>
-
-  <script>
-    const slides = document.querySelectorAll('.slides img');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 4000);
-  </script>
 </body>
 </html>
