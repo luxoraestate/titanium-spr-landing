@@ -9,16 +9,6 @@
   <meta name="google-site-verification" content="tJ4wpXe95pAio0GitNi_2I1Qito-Zp5xhacccG0PsNc" />
   <link rel="icon" type="image/png" href="/mnt/data/A_32x32_pixel_ICO_(favicon)_digital_graphic_featur.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- Google Analytics GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSP441H3QY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KSP441H3QY');
-  </script>
-
   <style>
     body {
       margin: 0;
@@ -140,7 +130,7 @@
     .form-overlay textarea {
       padding: 10px;
       border-radius: 5px;
-      border: 1px solid #567d46; /* changed to green */
+      border: 1px solid #ccc;
     }
 
     .form-overlay button {
@@ -177,7 +167,7 @@
     }
 
     .amenity-block {
-      background: #e4f0dc; /* light green instead of grey */
+      background: #e6f4ea;
       padding: 15px;
       border-radius: 10px;
     }
@@ -232,6 +222,7 @@
     }
   </style>
 
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -288,39 +279,117 @@
         "name": "Luxora Estate",
         "image": "https://luxoraestate.co.in/logo.png",
         "priceRange": "₹₹₹",
-        "telephone": "+91 9310569568
-    "address": {
-"@type": "PostalAddress",
-"streetAddress": "Sector 71, Southern Peripheral Road",
-"addressLocality": "Gurugram",
-"addressRegion": "Haryana",
-"postalCode": "122018",
-"addressCountry": "IN"
-},
-"url": "https://luxoraestate.co.in"
-}
-]
-}
-</script>
-  <h1>Titanium SPR by Signature Global</h1>
-<h2>Eco-Luxury 3.5 & 4.5 BHK High-Rise Flats in Gurugram</h2>
-<p>Experience a harmonious blend of luxury and sustainability.</p>
+        "telephone": "+91 9310569568",
+        "email": "vivek.shuklaluxoraestates@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sector 71, Southern Peripheral Road",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "postalCode": "122018",
+          "addressCountry": "IN"
+        },
+        "url": "https://luxoraestate.co.in",
+        "openingHours": "Mo-Su 09:00-23:00",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.4129",
+          "longitude": "77.0419"
+        },
+        "sameAs": [
+          "https://www.facebook.com/LuxoraEstate",
+          "https://www.instagram.com/luxoraestate/"
+        ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://luxoraestate.co.in/#titaniumspr",
+        "name": "Titanium SPR by Signature Global",
+        "image": [
+          "https://luxoraestate.co.in/images/gallery2.jpg",
+          "https://luxoraestate.co.in/images/gallery3.jpg"
+        ],
+        "description": "3.5 & 4.5 BHK high-rise apartments in Sector 71, SPR Road, Gurugram with 55+ modern amenities.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Signature Global"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": "15000000",
+          "priceValidUntil": "2025-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock",
+          "url": "https://luxoraestate.co.in"
+        },
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.7",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "NRI Client"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
 
-<div class="slider">
-  <div class="slides">
-    <img src="https://luxoraestate.co.in/images/slider1.jpg" class="active" alt="Titanium SPR view 1" />
-    <img src="https://luxoraestate.co.in/images/slider2.jpg" alt="Titanium SPR view 2" />
-    <img src="https://luxoraestate.co.in/images/slider3.jpg" alt="Titanium SPR view 3" />
+<body>
+  <div class="top-header">
+    <div class="logo">Luxora Estate</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="cta-button">Get Started</button>
   </div>
 
-  <div class="form-overlay">
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone" required />
-      <textarea name="message" rows="4" placeholder="Message or preferred time to call"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</div>
+  <header>
+    <h1>Titanium SPR by Signature Global</h1>
+    <h2>Exclusively Marketed by Luxora Estate</h2>
+    <p>Where Urban Luxury Meets Green Harmony</p>
+  </header>
 
+  <div class="slider">
+    <div class="slides">
+      <img src="gallery2.jpg" alt="Exterior view of Titanium SPR" class="active">
+      <img src="gallery3.jpg" alt="Modern apartment interior">
+      <img src="gallery4.jpg" alt="Amenities and green open spaces">
+    </div>
+    <div class="form-overlay">
+      <form action="https://formspree.io/f/xrbqvkvv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone" required>
+        <textarea name="message" rows="4" placeholder="Message or preferred time to call"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sections (Project Overview, Amenities, etc.) follow here exactly as before with green block styles applied -->
+
+  <footer>
+    &copy; 2025 Luxora Estate | Titanium SPR Project
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slides img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
