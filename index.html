@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Titanium SPR by Signature Global</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap"
+    rel="stylesheet"
+  />
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       margin: 0;
       padding: 0;
       background: #f7f7f7;
@@ -20,7 +23,7 @@
       text-align: center;
     }
     header h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: "Playfair Display", serif;
       font-size: 2.5rem;
       margin: 0;
     }
@@ -34,7 +37,7 @@
       padding: 20px;
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     h3 {
       color: #0a0a23;
@@ -53,7 +56,8 @@
       text-align: center;
       margin-top: 30px;
     }
-    .cta a {
+    .cta a,
+    .cta button {
       display: inline-block;
       margin-top: 10px;
       background: #d4af37;
@@ -61,23 +65,33 @@
       padding: 12px 24px;
       text-decoration: none;
       border-radius: 6px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    form button {
-      background: #d4af37;
-      color: white;
-      padding: 12px 24px;
       border: none;
-      border-radius: 6px;
       cursor: pointer;
       font-size: 1rem;
+    }
+    .cta a.whatsapp {
+      background-color: #25d366;
+    }
+    form input,
+    form textarea {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    form textarea {
+      resize: vertical;
+    }
+    #thank-you {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -129,199 +143,55 @@
   <section class="cta">
     <h3>Book a Private Visit or Request a Callback</h3>
     <p>Available daily between 9:00 AM - 11:00 PM</p>
-    <a href="tel:+919310569568">Call Now: +91 9310569568</a><br>
-    <a href="mailto:vivek.shuklaluxoraestates@gmail.com">Email: vivek.shuklaluxoraestates@gmail.com</a>
-  </section>
+    <a href="tel:+919310569568">Call Now: +91 9310569568</a><br />
+    <a href="mailto:vivek.shuklaluxoraestates@gmail.com">Email: vivek.shuklaluxoraestates@gmail.com</a><br />
+    <a
+      href="https://wa.me/919310569568?text=I'm%20interested%20in%20Titanium%20SPR%20project"
+      target="_blank"
+      class="whatsapp"
+      >Chat on WhatsApp</a
+    >
 
-  <section class="cta">
-    <h3>Send Us an Inquiry</h3>
-    <form action="https://formspree.io/f/xrbqvkvv" method="POST">
+    <h3 style="margin-top: 40px;">Send Us an Inquiry</h3>
+    <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Your Phone Number" required />
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Your Message"
+        required
+      ></textarea>
       <button type="submit">Submit</button>
     </form>
+    <div id="thank-you">Thank you! We'll contact you shortly.</div>
   </section>
 
-  <footer>
-    &copy; 2025 Luxora Estate | Titanium SPR Project
-  </footer>
+  <footer>&copy; 2025 Luxora Estate | Titanium SPR Project</footer>
+
+  <script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        const response = await fetch("https://formspree.io/f/xrbqvkvv", {
+          method: "POST",
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          form.style.display = "none";
+          document.getElementById("thank-you").style.display = "block";
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      });
+  </script>
 </body>
 </html>
-      object-fit: cover;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h3 {
-      color: #0a0a23;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    button {
-      background: #d4af37;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 10px;
-      background: #d4af37;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-    footer {
-      background: #0a0a23;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Titanium SPR by Signature Global</h1>
-    <h2>Exclusively Marketed by Luxora Estate</h2>
-    <p>Ultra-Luxury Living in Gurugram</p>
-  </header>
-
-  <div class="hero">
-    <img src="https://source.unsplash.com/1600x600/?luxury,building" alt="Luxury Building Banner"/>
-  </div>
-
-  <section>
-    <h3>Project Highlights</h3>
-    <ul>
-      <li>Ultra-premium residences on Southern Peripheral Road (SPR)</li>
-      <li>Developed by Signature Global – India’s award-winning developer</li>
-      <li>Smart-home features, private elevators & designer interiors</li>
-      <li>World-class clubhouse, infinity pool & wellness zone</li>
-      <li>15 mins to NH8 & IGI Airport | Seamless metro access</li>
-      <li>Exclusive pre-launch benefits for NRIs & HNIs</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Gallery</h3>
-    <div class="gallery">
-      <img src="https://source.unsplash.com/800x600/?apartment,interior" alt="Interior"/>
-      <img src="https://source.unsplash.com/800x600/?clubhouse,architecture" alt="Clubhouse"/>
-      <img src="https://source.unsplash.com/800x600/?pool,resort" alt="Pool"/>
-    </div>
-  </section>
-
-  <section>
-    <h3>About the Project</h3>
-    <p>
-      Titanium SPR is a visionary real estate marvel by Signature Global, crafted for high-net-worth investors and global residents.
-      Located in Gurugram's booming SPR corridor, it offers timeless elegance, unmatched architecture, and smart connectivity.
-    </p>
-  </section>
-
-  <section>
-    <h3>Why Choose Luxora Estate?</h3>
-    <ul>
-      <li>Official Channel Partner of Signature Global</li>
-      <li>1000+ satisfied NRI & investor clients</li>
-      <li>Transparent, RERA-compliant transactions</li>
-      <li>Dedicated support from inquiry to possession</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Location Advantage</h3>
-    <ul>
-      <li>Close to IGI Airport, Golf Course Ext. Road & top schools</li>
-      <li>Located in Sector 71, Southern Peripheral Road (SPR), Gurugram</li>
-    </ul>
-    <img src="https://source.unsplash.com/900x400/?map,gurgaon" alt="Location Map" style="width:100%; margin-top: 20px; border-radius: 10px;"/>
-  </section>
-  <section>
-    <h3>Book a Private Visit / Request a Callback</h3>
-    <form action="https://formspree.io/f/xknldvqq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone Number" required />
-      <input type="text" name="visit_time" placeholder="Preferred Visit Time" />
-      <textarea name="message" placeholder="Your Message" rows="4"></textarea>
-      <button type="submit">Submit Request</button>
-    </form>
-  </section>
-   <section class="cta">
-  <h3>Send Us an Inquiry</h3>
-  <form id="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Your Phone Number" required />
-    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-  <div id="thank-you" style="display:none; margin-top:20px; color:green;">
-    Thank you! We'll contact you shortly.
-  </div>
-</section>
-<script>
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const response = await fetch("https://formspree.io/f/xrbqvkvv", {
-      method: "POST",
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      form.style.display = "none";
-      document.getElementById('thank-you').style.display = "block";
-    } else {
-      alert("Oops! Something went wrong. Please try again.");
-    }
-  });
-</script>
-<a href="tel:+919310569568">Call Now: +91 9310569568</a><br>
-<a href="mailto:vivek.shuklaluxoraestates@gmail.com">Email: vivek.shuklaluxoraestates@gmail.com</a>
-<a href="https://wa.me/919310569568?text=I'm%20interested%20in%20Titanium%20SPR%20project" target="_blank" style="background-color:#25D366; display:inline-block; margin-top:10px; color:white; padding:12px 24px; text-decoration:none; border-radius:6px;">
-  Chat on WhatsApp
-</a>
