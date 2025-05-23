@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titanium SPR by Signature Global</title>
-  <meta name="description" content="3.5 & 4.5 BHK ultra-luxury apartments in Gurugram with 55+ eco-friendly amenities by Signature Global. Marketed by Luxora Estate."/>
-  <meta property="og:title" content="Titanium SPR by Signature Global" />
-  <meta property="og:description" content="Titanium SPR 3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities." />
-  <meta property="og:image" content="https://yourdomain.com/banner.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Titanium SPR by Signature Global"/>
-  <meta name="twitter:description" content="3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities."/>
-  <meta name="twitter:image" content="https://yourdomain.com/banner.jpg"/>
-  <meta name="keywords" content="Signature Global, Titanium SPR, Luxora Estate, luxury flats Gurugram, 3.5 BHK Gurugram, 4.5 BHK Gurugram, eco-friendly homes"/>
-  <meta name="author" content="Luxora Estate"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <meta name="description" content="3.5 & 4.5 BHK ultra-luxury apartments in Gurugram with 55+ eco-friendly amenities by Signature Global. Marketed by Luxora Estate."><meta property="og:title" content="Titanium SPR by Signature Global" />
+<meta property="og:description" content="3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities." />
+<meta property="og:image" content="https://yourdomain.com/banner.jpg" />
+<meta property="og:url" content="https://yourdomain.com" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Titanium SPR by Signature Global">
+<meta name="twitter:description" content="3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities.">
+<meta name="twitter:image" content="https://yourdomain.com/banner.jpg">
 
+  <meta name="keywords" content="Signature Global, Titanium SPR, Luxora Estate, luxury flats Gurugram, 3.5 BHK Gurugram, 4.5 BHK Gurugram, eco-friendly homes">
+  <meta name="author" content="Luxora Estate">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSP441H3QY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KSP441H3QY');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Luxora Estate",
+    "url": "https://yourdomain.com",
+    "logo": "https://yourdomain.com/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3rd Floor, D-Block, Laxmi Nagar",
+      "addressLocality": "New Delhi",
+      "addressRegion": "Delhi",
+      "postalCode": "110092",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91 9310569568",
+    "email": "vivek.shuklaluxoraestates@gmail.com"
+  }
+  </script>
   <style>
     :root {
       --primary: #2F6652;
@@ -34,78 +63,66 @@
       background: var(--background);
       color: var(--text);
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    header {
+      text-align: center;
+      background: var(--primary);
+      color: white;
+      padding: 40px 20px;
     }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
     }
-    .hero-video video {
-      position: absolute;
+    header h2 {
+      font-weight: 400;
+      margin: 10px 0 5px;
+    }
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+    .slides img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      top: 0;
-      left: 0;
-      z-index: -1;
+      display: none;
     }
-    .hero-overlay {
-      position: relative;
-      z-index: 1;
-      text-align: center;
+    .slides img.active {
+      display: block;
+    }
+    .form-overlay {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 350px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .form-overlay form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-overlay input,
+    .form-overlay textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-overlay button {
+      background: linear-gradient(to right, var(--accent), var(--highlight));
       color: white;
-      padding-top: 20vh;
-    }
-    .hero-overlay h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .hero-overlay p {
-      font-size: 1.2rem;
-    }
-    /* WhatsApp Icon */
-    .whatsapp-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-    .whatsapp-icon img {
-      width: 60px;
-      height: 60px;
-    }
-    /* Enquiry Tab */
-    .enquiry-tab {
-      position: fixed;
-      bottom: 100px;
-      left: 20px;
-      z-index: 999;
-    }
-    .enquiry-tab button {
-      background: linear-gradient(to right, green, black);
-      color: white;
-      padding: 10px 16px;
+      padding: 12px;
       border: none;
-      border-radius: 20px;
+      border-radius: 6px;
+      cursor: pointer;
       font-weight: bold;
     }
-    .enquiry-form {
-      display: none;
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      max-width: 300px;
-      margin-top: 10px;
-    }
-    .enquiry-form input,
-    .enquiry-form textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 8px;
-    }
-    /* Main Content Sections */
     section {
       max-width: 1000px;
       margin: 40px auto;
@@ -151,32 +168,52 @@
       border-radius: 6px;
       font-weight: bold;
     }
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    .whatsapp-icon img {
+      width: 60px;
+      height: 60px;
+    }
     @media screen and (max-width: 600px) {
-      .hero-overlay h1 {
+      header h1 {
         font-size: 2rem;
+      }
+      .form-overlay {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Fixed Header with Logo -->
-  <header class="custom-header">
-    <img src="logo.png" alt="Logo" class="header-logo">
+  <header>
+    <h1>Titanium SPR by Signature Global</h1>
+    <h2>Exclusively Marketed by Luxora Estate</h2>
+    <p>Eco-luxury 3.5 & 4.5 BHK Residences in Gurugram</p>
   </header>
 
-  <!-- Hero Section with Video Background -->
-  <section class="hero-video">
-    <video autoplay muted loop playsinline>
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay">
-      <h1>Experience Titanium SPR</h1>
-      <p>Ultra-luxury 3.5 & 4.5 BHK Homes in Gurugram</p>
+  <div class="slider">
+    <div class="slides">
+      <img src="gallery2.jpg">
+      <img src="gallery3.jpg">
+      <img src="gallery4.jpg">
     </div>
-  </section>
+    <div class="form-overlay">
+      <form action="https://formspree.io/f/xrbqvkvv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone" required>
+        <textarea name="message" rows="4" placeholder="Message or preferred time to call"></textarea>
+        <button type="submit">Request Callback</button>
+      </form>
+    </div>
+  </div>
 
-  <!-- Main Content Sections -->
   <section>
     <h3>Project Overview</h3>
     <p><strong>3.5 & 4.5 BHK Flats – Luxury Meets Sustainability</strong></p>
@@ -238,15 +275,24 @@
     <a href="mailto:vivek.shuklaluxoraestates@gmail.com">📧 Email Us</a>
   </section>
 
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/919310569568" target="_blank">
+      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp">
+    </a>
+  </div>
+
   <footer>
     &copy; 2025 Luxora Estate | Titanium SPR Project
   </footer>
-<div class="whatsapp-icon">
-<a href="https://wa.me/919310569568" target="_blank">
-<img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp">
-</a>
-</div>
 
-<footer>
-&copy; 2025 Luxora Estate | Titanium SPR Project
-</footer>
+  <script>
+    const slides = document.querySelectorAll('.slides img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
