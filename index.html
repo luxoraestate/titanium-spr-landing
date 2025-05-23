@@ -294,18 +294,3 @@ allowfullscreen>
 <footer>
 &copy; 2025 Luxora Estate | Titanium SPR Project
 </footer>
-
-<script>
-const slides = document.querySelectorAll('.slides img');
-let current = 0;
-setInterval(() => {
-slides[current].classList.remove('active');
-current = (current + 1) % slides.length;
-slides[current].classList.add('active');
-}, 4000);
-</script>
-</body>
-</html>
-<header class="custom-header">
-<img src="logo.png" alt="Logo" class="logo">
-</header>
