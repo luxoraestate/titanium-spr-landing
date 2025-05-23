@@ -1,297 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Titanium SPR by Signature Global</title>
-  <meta name="description" content="3.5 & 4.5 BHK ultra-luxury apartments in Gurugram with 55+ eco-friendly amenities by Signature Global. Marketed by Luxora Estate." />
-  <meta property="og:title" content="Titanium SPR by Signature Global" />
-  <meta property="og:description" content="Titanium SPR 3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities." />
-  <meta property="og:image" content="https://yourdomain.com/banner.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Titanium SPR by Signature Global" />
-  <meta name="twitter:description" content="3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities." />
-  <meta name="twitter:image" content="https://yourdomain.com/banner.jpg" />
-  <meta name="keywords" content="Signature Global, Titanium SPR, Luxora Estate, luxury flats Gurugram, 3.5 BHK Gurugram, 4.5 BHK Gurugram, eco-friendly homes" />
-  <meta name="author" content="Luxora Estate" />
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #2F6652;
-      --accent: #C5A249;
-      --background: #F8F9F5;
-      --text: #333;
-      --highlight: #D4AF37;
-    }
-    body {
-      margin: 0;
-      font-family: 'Urbanist', sans-serif;
-      background: var(--background);
-      color: var(--text);
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    .custom-header {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 80px;
-      background: linear-gradient(to left, black, green);
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0 20px;
-      z-index: 1000;
-    }
-    .custom-header .logo {
-      height: 50px;
-      object-fit: contain;
-    }
-    .hero-banner {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .hero-banner video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .hero-overlay {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h3 {
-      color: var(--accent);
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 5px;
-    }
-    .amenities {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .amenity-block {
-      background: #f0f0f0;
-      padding: 15px;
-      border-radius: 10px;
-    }
-    ul {
-      padding-left: 0;
-      list-style: none;
-    }
-    .cta, footer {
-      text-align: center;
-      background: var(--primary);
-      color: white;
-      padding: 30px 20px;
-    }
-    .cta a {
-      display: inline-block;
-      margin: 10px;
-      background:linear-gradient(to right,var(--accent), var(--highlight));
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .whatsapp-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-    .whatsapp-icon img {
-      width: 60px;
-      height: 60px;
-    }
-    .enquiry-tab {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 999;
-    }
-    .enquiry-tab button {
-      background: linear-gradient(to right, green, black);
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 20px;
-      font-weight: bold;
-    }
-    .enquiry-form {
-      display: none;
-      margin-top: 10px;
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      max-width: 300px;
-    }
-    .enquiry-form input,
-    .enquiry-form textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 8px;
-    }
-    @mediascreen and (max-width: 600px) {
-      .hero-overlay h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titanium SPR by Signature Global</title>
+<meta name="description" content="3.5 & 4.5 BHK ultra-luxury apartments in Gurugram with 55+ eco-friendly amenities by Signature Global. Marketed by Luxora Estate.">
+<meta property="og:title" content="Titanium SPR by Signature Global" />
+<meta property="og:description" content="Titanium SPR 3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities." />
+<meta property="og:image" content="https://luxoraestate.github.io/titanium-spr-landing/gallery2.jpg" />
+<meta property="og:url" content="https://luxoraestate.github.io/titanium-spr-landing/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Titanium SPR by Signature Global">
+<meta name="twitter:description" content="3.5 & 4.5 BHK ultra-luxury eco-friendly apartments with 55+ amenities.">
+<meta name="twitter:image" content="https://luxoraestate.github.io/titanium-spr-landing/gallery2.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+margin: 0;
+font-family: 'Urbanist', sans-serif;
+background: #F8F9F5;
+color: #333;
+}
+.hero-banner {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-align: center;
+}
+.video-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+}
+.video-background iframe {
+width: 100%;
+height: 100%;
+pointer-events: none;
+}
+.hero-overlay {
+z-index: 2;
+position: relative;
+padding: 20px;
+background: rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+}
+.cta-btn {
+display: inline-block;
+margin-top: 15px;
+background: linear-gradient(to right, #C5A249, #D4AF37);
+padding: 12px 24px;
+color: white;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+}
+</style>
 </head>
 <body>
-  <header class="custom-header">
-    <img src="logo.png" alt="Logo" class="logo" />
-  </header>
-  <section class="hero-banner">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="your-video.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay">
-      <h1>Experience Titanium SPR</h1>
-      <p>Ultra-luxury 3.5 & 4.5 BHK Residences in Gurugram</p>
-      <a href="#contact" class="cta-btn">Request Callback</a>
-    </div>
-  </section>
-  <div class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/nQ8LSFE-efM"
-    title="Titanium SPR - Signature Global"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+
+<section class="hero-banner">
+<div class="video-background">
+<iframe
+src="https://www.youtube.com/embed/nQ8LSFE-efM?autoplay=1&mute=1&controls=0&loop=1&playlist=nQ8LSFE-efM&modestbranding=1&showinfo=0&rel=0"
+frameborder="0"
+allow="autoplay; fullscreen"
+allowfullscreen
+title="Titanium SPR Video Banner">
+</iframe>
+</div>
+<div class="hero-overlay">
+<h1>Experience Titanium SPR</h1>
+<p>Ultra-luxury 3.5 & 4.5 BHK Residences in Gurugram</p>
+<a href="#contact" class="cta-btn">Request Callback</a>
+</div>
+</section>
+
+<!-:root {
+--primary: #2F6652;
+--accent: #C5A249;
+--background: #F8F9F5;
+--text: #333;
+--highlight: #D4AF37;
+}
+body {
+margin: 0;
+font-family: 'Urbanist', sans-serif;
+background: var(--background);
+color: var(--text);
+}
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+.custom-header {
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+height: 80px;
+background: linear-gradient(to left, black, green);
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 0 20px;
+z-index: 1000;
+}
+.custom-header .logo {
+height: 50px;
+object-fit: contain;
+}
+.hero-banner {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+.hero-banner video {
+position: absolute;
+top: 0;
+left: 0;
+min-width: 100%;
+min-height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+.hero-overlay {
+position: relative;
+z-index: 1;
+color: white;
+text-align: center;
+top: 50%;
+transform: translateY(-50%);
+}
+section {
+max-width: 1000px;
+margin: 40px auto;
+padding: 20px;
+background: white;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+h3 {
+color: var(--accent);
+font-size: 1.6rem;
+border-bottom: 2px solid var(--accent);
+padding-bottom: 5px;
+}
+.amenities {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+.amenity-block {
+background: #f0f0f0;
+padding: 15px;
+border-radius: 10px;
+}
+ul {
+padding-left: 0;
+list-style: none;
+}
+.cta, footer {
+text-align: center;
+background: var(--primary);
+color: white;
+padding: 30px 20px;
+}
+.cta a {
+display: inline-block;
+margin: 10px;
+background:linear-gradient(to right,var(--accent), var(--highlight));
+color: white;
+padding: 12px 24px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+}
+.whatsapp-icon {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 999;
+}
+.whatsapp-icon img {
+width: 60px;
+height: 60px;
+}
+.enquiry-tab {
+position: fixed;
+bottom: 20px;
+left: 20px;
+z-index: 999;
+}
+.enquiry-tab button {
+background: linear-gradient(to right, green, black);
+color: white;
+padding: 10px 16px;
+border: none;
+border-radius: 20px;
+font-weight: bold;
+}
+.enquiry-form {
+display: none;
+margin-top: 10px;
+background: white;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+max-width: 300px;
+}
+.enquiry-form input,
+.enquiry-form textarea {
+width: 100%;
+margin-bottom: 10px;
+padding: 8px;
+}
+@mediascreen and (max-width: 600px) {
+.hero-overlay h1 {
+font-size: 1.5rem;
+}
+}
+</style>
+</head>
+<body>
+<header class="custom-header">
+<img src="logo.png" alt="Logo" class="logo" />
+</header>
+<section class="hero-banner">
+<video autoplay muted loop playsinline class="background-video">
+<source src="your-video.mp4" type="video/mp4" />
+</video>
+<div class="hero-overlay">
+<h1>Experience Titanium SPR</h1>
+<p>Ultra-luxury 3.5 & 4.5 BHK Residences in Gurugram</p>
+<a href="#contact" class="cta-btn">Request Callback</a>
+</div>
+</section>
+<div class="video-container">
+<iframe
+src="https://www.youtube.com/embed/nQ8LSFE-efM"
+title="Titanium SPR - Signature Global"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
 </div>
 .video-container {
-  position: relative;
-  padding-bottom: 98.25%; /* 16:9 aspect ratio */
-  height: 100;
-  overflow: hidden;
-  max-width: 100%;
-  margin-bottom: 20px;
+position: relative;
+padding-bottom: 98.25%; /* 16:9 aspect ratio */
+height: 100;
+overflow: hidden;
+max-width: 100%;
+margin-bottom: 20px;
 }
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
-  <section>
-    <h3>Project Overview</h3>
-    <p><strong>3.5 & 4.5 BHK Flats – Luxury Meets Sustainability</strong></p>
-    <p>Located in Sector 71, SPR Road, Gurugram, Titanium SPR offers unmatched bio-diverse landscaping and 55+ lifestyle amenities. It's not just a home — it's a sanctuary that redefines urban eco-luxury living.</p>
-  </section>
+<section>
+<h3>Project Overview</h3>
+<p><strong>3.5 & 4.5 BHK Flats – Luxury Meets Sustainability</strong></p>
+<p>Located in Sector 71, SPR Road, Gurugram, Titanium SPR offers unmatched bio-diverse landscaping and 55+ lifestyle amenities. It's not just a home — it's a sanctuary that redefines urban eco-luxury living.</p>
+</section>
 
-  <section>
-    <h3>Amenities</h3>
-    <div class="amenities">
-      <div class="amenity-block">
-        <h4>Health & Fitness</h4>
-        <ul>
-          <li>Outdoor GYM</li>
-          <li>Jogging Trail</li>
-          <li>Yoga & Meditation Area</li>
-          <li>Teens’ Play Area</li>
-        </ul>
-      </div>
-      <div class="amenity-block">
-        <h4>Water Zone</h4>
-        <ul>
-          <li>Infinity Pool</li>
-          <li>Kids Splash Pool</li>
-          <li>Jacuzzi & Leisure Pool</li>
-        </ul>
-      </div>
-      <div class="amenity-block">
-        <h4>Recreation & Sports</h4>
-        <ul>
-          <li>Cricket Pitch</li>
-          <li>Half Basketball Court</li>
-          <li>Badminton & Tennis Courts</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section>
+<h3>Amenities</h3>
+<div class="amenities">
+<div class="amenity-block">
+<h4>Health & Fitness</h4>
+<ul>
+<li>Outdoor GYM</li>
+<li>Jogging Trail</li>
+<li>Yoga & Meditation Area</li>
+<li>Teens’ Play Area</li>
+</ul>
+</div>
+<div class="amenity-block">
+<h4>Water Zone</h4>
+<ul>
+<li>Infinity Pool</li>
+<li>Kids Splash Pool</li>
+<li>Jacuzzi & Leisure Pool</li>
+</ul>
+</div>
+<div class="amenity-block">
+<h4>Recreation & Sports</h4>
+<ul>
+<li>Cricket Pitch</li>
+<li>Half Basketball Court</li>
+<li>Badminton & Tennis Courts</li>
+</ul>
+</div>
+</div>
+</section>
 
-  <section>
-    <h3>Why Choose Luxora Estate?</h3>
-    <ul>
-      <li>Official Channel Partner of Signature Global</li>
-      <li>1000+ satisfied clients including NRIs & investors</li>
-      <li>100% Transparent, RERA-Compliant Process</li>
-    </ul>
-  </section>
+<section>
+<h3>Why Choose Luxora Estate?</h3>
+<ul>
+<li>Official Channel Partner of Signature Global</li>
+<li>1000+ satisfied clients including NRIs & investors</li>
+<li>100% Transparent, RERA-Compliant Process</li>
+</ul>
+</section>
 
-  <section>
-    <h3>Location Advantage</h3>
-    <ul>
-      <li>Close to IGI Airport, Golf Course Ext. Road & top schools</li>
-      <li>Green Surroundings with Prime Connectivity</li>
-    </ul>
-  </section>
-  <section class="cta" id="contact">
-    <h3>Schedule a Site Visit or Request Info</h3>
-    <p>We're available 9:00 AM – 11:00 PM every day.</p>
-    <a href="tel:+919310569568">📞 Call: +91 9310569568</a>
-    <a href="mailto:vivek.shuklaluxoraestates@gmail.com">📧 Email Us</a>
-  </section>
-  <div class="whatsapp-icon">
-    <a href="https://wa.me/919310569568" target="_blank">
-      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" />
-    </a>
-  </div>
-  <div class="enquiry-tab">
-    <button onclick="toggleEnquiry()">📋 Enquire Now</button>
-    <div id="enquiryForm" class="enquiry-form">
-      <form action="https://formspree.io/f/xrbqvkvv" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="phone" placeholder="Your Phone" required />
-        <textarea name="message" rows="4" placeholder="Message or preferred time to call"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
-  <footer>
-    &copy; 2025 Luxora Estate | Titanium SPR Project
-  </footer>
-  <script>
-    function toggleEnquiry() {
-      const form = document.getElementById("enquiryForm");
-      form.style.display = (form.style.display === "block") ? "none" : "block";
-    }
-  </script>
+<section>
+<h3>Location Advantage</h3>
+<ul>
+<li>Close to IGI Airport, Golf Course Ext. Road & top schools</li>
+<li>Green Surroundings with Prime Connectivity</li>
+</ul>
+</section>
+<section class="cta" id="contact">
+<h3>Schedule a Site Visit or Request Info</h3>
+<p>We're available 9:00 AM – 11:00 PM every day.</p>
+<a href="tel:+919310569568">📞 Call: +91 9310569568</a>
+<a href="mailto:vivek.shuklaluxoraestates@gmail.com">📧 Email Us</a>
+</section>
+<div class="whatsapp-icon">
+<a href="https://wa.me/919310569568" target="_blank">
+<img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" />
+</a>
+</div>
+<div class="enquiry-tab">
+<button onclick="toggleEnquiry()">📋 Enquire Now</button>
+<div id="enquiryForm" class="enquiry-form">
+<form action="https://formspree.io/f/xrbqvkvv" method="POST">
+<input type="text" name="name" placeholder="Your Name" required />
+<input type="email" name="email" placeholder="Your Email" required />
+<input type="tel" name="phone" placeholder="Your Phone" required />
+<textarea name="message" rows="4" placeholder="Message or preferred time to call"></textarea>
+<button type="submit">Submit</button>
+</form>
+</div>
+</div>
+<footer>
+&copy; 2025 Luxora Estate | Titanium SPR Project
+</footer>
+<script>
+function toggleEnquiry() {
+const form = document.getElementById("enquiryForm");
+form.style.display = (form.style.display === "block") ? "none" : "block";
+}
+</script>
+</body>
+</html>
 </body>
 </html>
