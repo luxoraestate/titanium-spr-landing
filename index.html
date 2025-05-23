@@ -36,11 +36,10 @@
       overflow: hidden;
     }
 
-    .background-video {
+    #player {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      object-fit: cover;
       z-index: -1;
       pointer-events: none;
     }
@@ -81,16 +80,23 @@
 <body>
   <!-- Hero Video Section -->
   <section class="hero-banner">
-    <iframe
-      id="ytvideo"
-      class="background-video"
-      src="https://www.youtube.com/embed/nQ8LSFE-efM?enablejsapi=1&controls=0&mute=1&loop=1&playlist=nQ8LSFE-efM"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
+    <div id="player"></div>
     <div class="hero-overlay">
       <a href="#form" class="cta-btn">Request Callback</a>
+    </div>
+  </section>
+
+  <!-- Project Details Section -->
+  <section id="project-details" style="padding: 40px 20px; background: #f8f9f5;">
+    <h2 style="text-align: center;">Project Highlights</h2>
+    <div style="max-width: 800px; margin: auto; padding-top: 20px;">
+      <ul style="list-style: none; padding-left: 0;">
+        <li><strong>Location:</strong> Sector 71, Gurugram</li>
+        <li><strong>Configurations:</strong> 3.5 & 4.5 BHK Ultra-Luxury Apartments</li>
+        <li><strong>Amenities:</strong> 55+ Eco-Friendly Features</li>
+        <li><strong>Developer:</strong> Signature Global</li>
+        <li><strong>Marketing Partner:</strong> Luxora Estate</li>
+      </ul>
     </div>
   </section>
 
@@ -113,12 +119,40 @@
     </a>
   </div>
 
+  <!-- YouTube Iframe API & Control -->
   <script>
-    // Play YouTube video when cursor reaches top
-    document.addEventListener('mousemove', (e) => {
-      if (e.clientY < 100) {
-        const iframe = document.getElementById("ytvideo");
-        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'nQ8LSFE-efM',
+        playerVars: {
+          'autoplay': 1,
+          'controls': 0,
+          'showinfo': 0,
+          'modestbranding': 1,
+          'loop': 1,
+          'playlist': 'nQ8LSFE-efM',
+          'mute': 1,
+          'enablejsapi': 1
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    document.addEventListener('mousemove', function (e) {
+      if (e.clientY <= 100 && player) {
+        player.playVideo();
       }
     });
   </script>
